@@ -45,6 +45,7 @@ public class StudentLogin extends javax.swing.JFrame {
         jCheckBoxSHOW = new javax.swing.JCheckBox();
         jLabelINVALID = new javax.swing.JLabel();
         jButtonForgetpassword = new javax.swing.JButton();
+        jButtonHOME = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -107,12 +108,23 @@ public class StudentLogin extends javax.swing.JFrame {
         jButtonForgetpassword.setForeground(new java.awt.Color(204, 0, 51));
         jButtonForgetpassword.setText("Forget Password?");
 
+        jButtonHOME.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonHOME.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/exit.png"))); // NOI18N
+        jButtonHOME.setText("HOME");
+        jButtonHOME.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHOMEActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(688, Short.MAX_VALUE)
+                .addGap(259, 259, 259)
+                .addComponent(jButtonHOME)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 434, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -134,8 +146,10 @@ public class StudentLogin extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(59, 59, 59)
-                .addComponent(jLabel1)
-                .addGap(73, 73, 73)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jButtonHOME))
+                .addGap(55, 55, 55)
                 .addComponent(jLabelINVALID)
                 .addGap(26, 26, 26)
                 .addComponent(jLabel2)
@@ -250,6 +264,12 @@ public class StudentLogin extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonLoginActionPerformed
 
+    private void jButtonHOMEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHOMEActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        new HomePage().setVisible(true);
+    }//GEN-LAST:event_jButtonHOMEActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -287,6 +307,7 @@ public class StudentLogin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonForgetpassword;
+    private javax.swing.JButton jButtonHOME;
     private javax.swing.JButton jButtonLogin;
     private javax.swing.JCheckBox jCheckBoxSHOW;
     private javax.swing.JLabel jLabel1;

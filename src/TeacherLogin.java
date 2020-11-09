@@ -1,3 +1,10 @@
+
+import java.awt.Color;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+import project.ConnectionProvider;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,6 +22,7 @@ public class TeacherLogin extends javax.swing.JFrame {
      */
     public TeacherLogin() {
         initComponents();
+        jLabelINVALID1.setVisible(false);
     }
 
     /**
@@ -36,6 +44,7 @@ public class TeacherLogin extends javax.swing.JFrame {
         jCheckBoxSHOW1 = new javax.swing.JCheckBox();
         jLabelINVALID1 = new javax.swing.JLabel();
         jButtonForgetpassword1 = new javax.swing.JButton();
+        jButtonHOME = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -98,12 +107,23 @@ public class TeacherLogin extends javax.swing.JFrame {
         jButtonForgetpassword1.setForeground(new java.awt.Color(204, 0, 51));
         jButtonForgetpassword1.setText("Forget Password?");
 
+        jButtonHOME.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonHOME.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/exit.png"))); // NOI18N
+        jButtonHOME.setText("HOME");
+        jButtonHOME.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHOMEActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(688, Short.MAX_VALUE)
+                .addGap(95, 95, 95)
+                .addComponent(jButtonHOME)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 442, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -124,9 +144,14 @@ public class TeacherLogin extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addComponent(jLabel4)
-                .addGap(73, 73, 73)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(59, 59, 59)
+                        .addComponent(jLabel4))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(79, 79, 79)
+                        .addComponent(jButtonHOME)))
+                .addGap(42, 42, 42)
                 .addComponent(jLabelINVALID1)
                 .addGap(26, 26, 26)
                 .addComponent(jLabel5)
@@ -163,59 +188,59 @@ public class TeacherLogin extends javax.swing.JFrame {
 
     private void jTextFieldEmail1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldEmail1FocusGained
         // TODO add your handling code here:
-        jLabelINVALID.setVisible(false);
-        if(jTextFieldEmail.getText().equals("Email"))
+        jLabelINVALID1.setVisible(false);
+        if(jTextFieldEmail1.getText().equals("Email"))
         {
-            jTextFieldEmail.setText("");
-            jTextFieldEmail.setForeground(new Color(0,118,221 ));
+            jTextFieldEmail1.setText("");
+            jTextFieldEmail1.setForeground(new Color(0,118,221 ));
         }
     }//GEN-LAST:event_jTextFieldEmail1FocusGained
 
     private void jTextFieldEmail1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldEmail1FocusLost
         // TODO add your handling code here:
-        jLabelINVALID.setVisible(false);
-        if(jTextFieldEmail.getText().equals(""))
+        jLabelINVALID1.setVisible(false);
+        if(jTextFieldEmail1.getText().equals(""))
         {
-            jTextFieldEmail.setText("Email");
-            jTextFieldEmail.setForeground(new Color(0,118,221 ));
+            jTextFieldEmail1.setText("Email");
+            jTextFieldEmail1.setForeground(new Color(0,118,221 ));
         }
     }//GEN-LAST:event_jTextFieldEmail1FocusLost
 
     private void jPasswordFieldPassword1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jPasswordFieldPassword1FocusGained
         // TODO add your handling code here:
-        jLabelINVALID.setVisible(false);
-        if(jPasswordFieldPassword.getText().equals("Password"))
+        jLabelINVALID1.setVisible(false);
+        if(jPasswordFieldPassword1.getText().equals("Password"))
         {
-            jPasswordFieldPassword.setText("");
-            jPasswordFieldPassword.setForeground(new Color(0,118,221 ));
+            jPasswordFieldPassword1.setText("");
+            jPasswordFieldPassword1.setForeground(new Color(0,118,221 ));
         }
     }//GEN-LAST:event_jPasswordFieldPassword1FocusGained
 
     private void jPasswordFieldPassword1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jPasswordFieldPassword1FocusLost
         // TODO add your handling code here:
-        jLabelINVALID.setVisible(false);
-        if(jPasswordFieldPassword.getText().equals(""))
+        jLabelINVALID1.setVisible(false);
+        if(jPasswordFieldPassword1.getText().equals(""))
         {
-            jPasswordFieldPassword.setText("Password");
-            jPasswordFieldPassword.setForeground(new Color(0,118,221 ));
+            jPasswordFieldPassword1.setText("Password");
+            jPasswordFieldPassword1.setForeground(new Color(0,118,221 ));
         }
     }//GEN-LAST:event_jPasswordFieldPassword1FocusLost
 
     private void jButtonLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLogin1ActionPerformed
         // TODO add your handling code here:LOGIN
         int checkid=0;
-        String Email =jTextFieldEmail.getText();
-        String Password1 =jPasswordFieldPassword.getText();
+        String Email =jTextFieldEmail1.getText();
+        String Password1 =jPasswordFieldPassword1.getText();
         try
         {
             Connection con=ConnectionProvider.getCon();
             Statement st=con.createStatement();
-            ResultSet rs=st.executeQuery("select * from studentinfo where Email='"+Email+"'AND Password1='"+Password1+"'");
+            ResultSet rs=st.executeQuery("select * from teacherinfo where Email='"+Email+"'AND Password1='"+Password1+"'");
             while(rs.next())
             {
                 checkid=1;
                 setVisible(false);
-                new StudentDashboard().setVisible(true);
+                new TeacherDashboard().setVisible(true);
             }
             if (checkid==0)
             {
@@ -231,15 +256,21 @@ public class TeacherLogin extends javax.swing.JFrame {
 
     private void jCheckBoxSHOW1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxSHOW1ActionPerformed
         // TODO add your handling code here:
-        if(jCheckBoxSHOW.isSelected())
+        if(jCheckBoxSHOW1.isSelected())
         {
-            jPasswordFieldPassword.setEchoChar((char)0);
+            jPasswordFieldPassword1.setEchoChar((char)0);
         }
         else
         {
-            jPasswordFieldPassword.setEchoChar('*');
+            jPasswordFieldPassword1.setEchoChar('*');
         }
     }//GEN-LAST:event_jCheckBoxSHOW1ActionPerformed
+
+    private void jButtonHOMEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHOMEActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        new HomePage().setVisible(true);
+    }//GEN-LAST:event_jButtonHOMEActionPerformed
 
     /**
      * @param args the command line arguments
@@ -277,25 +308,16 @@ public class TeacherLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonForgetpassword;
     private javax.swing.JButton jButtonForgetpassword1;
-    private javax.swing.JButton jButtonLogin;
+    private javax.swing.JButton jButtonHOME;
     private javax.swing.JButton jButtonLogin1;
-    private javax.swing.JCheckBox jCheckBoxSHOW;
     private javax.swing.JCheckBox jCheckBoxSHOW1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabelINVALID;
     private javax.swing.JLabel jLabelINVALID1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordFieldPassword;
     private javax.swing.JPasswordField jPasswordFieldPassword1;
-    private javax.swing.JTextField jTextFieldEmail;
     private javax.swing.JTextField jTextFieldEmail1;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,3 +1,11 @@
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+import project.ConnectionProvider;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,6 +23,30 @@ public class TeacherSignup extends javax.swing.JFrame {
      */
     public TeacherSignup() {
         initComponents();
+        jLabelSAME.setVisible(false);
+        try
+        {
+            int id=1;
+            String str1=String.valueOf(id);
+            jLabelID.setText(str1);
+            Connection con=ConnectionProvider.getCon();
+            Statement st= con.createStatement();
+            ResultSet rs=st.executeQuery("select max(id) from teacherinfo");
+            while(rs.next())
+            {
+                id=rs.getInt(1);
+                id=id+1;
+                String str=String.valueOf(id);
+                jLabelID.setText(str);
+            }
+            
+            
+            
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
     }
 
     /**
@@ -40,6 +72,7 @@ public class TeacherSignup extends javax.swing.JFrame {
         jButtonRegister = new javax.swing.JButton();
         jButtonReset = new javax.swing.JButton();
         jLabelSAME = new javax.swing.JLabel();
+        jButtonHOME = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -71,19 +104,45 @@ public class TeacherSignup extends javax.swing.JFrame {
 
         jPasswordFieldPassword.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
 
-        jCheckBox1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jCheckBox1.setText("jCheckBox1");
+        jCheckBox1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jCheckBox1.setText("Show Password");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
 
         jButtonRegister.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButtonRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/save.png"))); // NOI18N
         jButtonRegister.setText("Register");
+        jButtonRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegisterActionPerformed(evt);
+            }
+        });
 
         jButtonReset.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButtonReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/reset.png"))); // NOI18N
         jButtonReset.setText("Reset");
+        jButtonReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonResetActionPerformed(evt);
+            }
+        });
 
         jLabelSAME.setFont(new java.awt.Font("Tahoma", 1, 19)); // NOI18N
         jLabelSAME.setForeground(new java.awt.Color(255, 0, 0));
         jLabelSAME.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/close.png"))); // NOI18N
         jLabelSAME.setText("Email or Roll no. Already Exist");
+
+        jButtonHOME.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonHOME.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/exit.png"))); // NOI18N
+        jButtonHOME.setText("HOME");
+        jButtonHOME.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHOMEActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -92,39 +151,43 @@ public class TeacherSignup extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(355, 355, 355)
-                        .addComponent(jCheckBox1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(497, 497, 497)
-                        .addComponent(jLabelSAME))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(470, 470, 470)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPasswordFieldPassword)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButtonRegister)
-                                .addGap(111, 111, 111)
-                                .addComponent(jButtonReset))
-                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextFieldEmail)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextFieldFullName)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabelID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jCheckBox1)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jPasswordFieldPassword)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jButtonRegister)
+                                    .addGap(111, 111, 111)
+                                    .addComponent(jButtonReset))
+                                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jTextFieldEmail)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jTextFieldFullName)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabelID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(458, 458, 458)
-                        .addComponent(jLabel1)))
-                .addContainerGap(480, Short.MAX_VALUE))
+                        .addGap(485, 485, 485)
+                        .addComponent(jLabelSAME)))
+                .addContainerGap(452, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(458, 458, 458)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonHOME)
+                .addGap(74, 74, 74))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addComponent(jLabel1)
-                .addGap(27, 27, 27)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jButtonHOME))
+                .addGap(10, 10, 10)
                 .addComponent(jLabelSAME)
-                .addGap(30, 30, 30)
+                .addGap(29, 29, 29)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(jLabelID)
@@ -140,13 +203,13 @@ public class TeacherSignup extends javax.swing.JFrame {
                 .addComponent(jLabel6)
                 .addGap(18, 18, 18)
                 .addComponent(jPasswordFieldPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(58, 58, 58)
+                .addGap(18, 18, 18)
+                .addComponent(jCheckBox1)
+                .addGap(47, 47, 47)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonReset)
                     .addComponent(jButtonRegister))
-                .addGap(107, 107, 107)
-                .addComponent(jCheckBox1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(121, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -162,6 +225,60 @@ public class TeacherSignup extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+        if(jCheckBox1.isSelected())
+        {
+            jPasswordFieldPassword.setEchoChar((char)0);
+        }
+        else
+        {
+             jPasswordFieldPassword.setEchoChar('*');
+        }
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void jButtonResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonResetActionPerformed
+        // TODO add your handling code here:RESET
+        setVisible(false);
+        new StudentSignUp().setVisible(true);
+    }//GEN-LAST:event_jButtonResetActionPerformed
+
+    private void jButtonRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegisterActionPerformed
+        // TODO add your handling code here: REGISTER
+        String id=jLabelID.getText();
+        String Fullname=jTextFieldFullName.getText();
+        String Email=jTextFieldEmail.getText();
+        String Password1=jPasswordFieldPassword.getText();
+        
+        
+        try
+        {
+            Connection con=ConnectionProvider.getCon();
+            PreparedStatement ps=con.prepareStatement("insert into teacherinfo values (?,?,?,?)");
+            ps.setString(1, id);
+            ps.setString(2, Fullname);
+            ps.setString(3, Email);
+            ps.setString(4, Password1);
+            
+            
+            ps.executeUpdate();
+            JOptionPane.showMessageDialog(null,"Successfully Register,Now you can Login");
+            setVisible(false);
+            new TeacherLogin().setVisible(true);
+            
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null,e);
+        }
+    }//GEN-LAST:event_jButtonRegisterActionPerformed
+
+    private void jButtonHOMEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHOMEActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        new HomePage().setVisible(true);
+    }//GEN-LAST:event_jButtonHOMEActionPerformed
 
     /**
      * @param args the command line arguments
@@ -199,6 +316,7 @@ public class TeacherSignup extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonHOME;
     private javax.swing.JButton jButtonRegister;
     private javax.swing.JButton jButtonReset;
     private javax.swing.JCheckBox jCheckBox1;
