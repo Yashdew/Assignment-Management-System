@@ -48,6 +48,11 @@ public class TeacherDashboard extends javax.swing.JFrame {
                 jButtonCreateMouseClicked(evt);
             }
         });
+        jButtonCreate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCreateActionPerformed(evt);
+            }
+        });
 
         jButtonCheckASS.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButtonCheckASS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search.png"))); // NOI18N
@@ -157,6 +162,10 @@ public class TeacherDashboard extends javax.swing.JFrame {
             new HomePage().setVisible(true);
         }
     }//GEN-LAST:event_jButtonExitActionPerformed
+
+    private void jButtonCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonCreateActionPerformed
 
     /**
      * @param args the command line arguments
