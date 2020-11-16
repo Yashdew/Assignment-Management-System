@@ -1,3 +1,6 @@
+import project.ConnectionProvider;
+import java.sql.*;
+import javax.swing.JOptionPane;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -38,9 +41,6 @@ public class CreateAss extends javax.swing.JFrame {
         jButtonSubmit = new javax.swing.JButton();
         jButtonReset = new javax.swing.JButton();
         jComboBoxSub2 = new javax.swing.JComboBox<>();
-        jComboBoxSub1 = new javax.swing.JComboBox<>();
-        jComboBoxSub3 = new javax.swing.JComboBox<>();
-        jComboBoxSub4 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -89,16 +89,7 @@ public class CreateAss extends javax.swing.JFrame {
         });
 
         jComboBoxSub2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jComboBoxSub2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DBMS", "OS", "SEPM", "HCI ", "TOC" }));
-
-        jComboBoxSub1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jComboBoxSub1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "M1", "Phy", "Chem", "Mech", "Elec" }));
-
-        jComboBoxSub3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jComboBoxSub3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "OOPL", "DELD", "M3", "DS" }));
-
-        jComboBoxSub4.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jComboBoxSub4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ICS", "MLA", "SDM", "BAI", "STQA", " " }));
+        jComboBoxSub2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "M1", "Phy", "Chem", "Mech", "Elec", "OOPL", "FDS", "DELD", "M3", "DS", "OS", "HCI", "TOC", "DBMS", "SEPM", "ICS", "MLA", "SDM", "BAI", "STQA", " " }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -112,48 +103,40 @@ public class CreateAss extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(463, 463, 463)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButtonSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(50, 50, 50)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jComboBoxAssname, 0, 158, Short.MAX_VALUE)
-                                .addComponent(jButtonReset, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jComboBoxSub2, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jComboBoxSub1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jComboBoxSub3, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jComboBoxSub4, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(117, Short.MAX_VALUE))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(50, 50, 50)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jButtonReset, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
+                                    .addComponent(jComboBoxAssname, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jComboBoxSub2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jComboBoxbatch, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(435, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(462, 462, 462)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)))
-                    .addGap(50, 50, 50)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jComboBoxDiv, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jComboBoxbatch, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addContainerGap(461, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE))
+                    .addGap(61, 61, 61)
+                    .addComponent(jComboBoxDiv, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(458, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(92, 92, 92)
                 .addComponent(jLabel1)
-                .addGap(163, 163, 163)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBoxSub2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBoxSub1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBoxSub3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBoxSub4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(64, 64, 64)
+                .addGap(119, 119, 119)
+                .addComponent(jComboBoxbatch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jComboBoxSub2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel7)
+                .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jComboBoxAssname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -165,15 +148,11 @@ public class CreateAss extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(260, 260, 260)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jComboBoxbatch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(18, 18, 18)
                     .addComponent(jLabel4)
                     .addGap(18, 18, 18)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel7)
-                        .addComponent(jComboBoxDiv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBoxDiv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(455, Short.MAX_VALUE)))
         );
 
@@ -194,33 +173,30 @@ public class CreateAss extends javax.swing.JFrame {
     private void jButtonSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubmitActionPerformed
         // TODO add your handling code here: SUBMIT
         String Class=(String)jComboBoxbatch.getSelectedItem();
-        String Subject=(String)jComboBoxSub.getSelectedItem();
+        String Subject=(String)jComboBoxSub2.getSelectedItem();
         String Div=(String)jComboBoxDiv.getSelectedItem();
-        String tablename=Class+Subject+Div;
-        System.out.println(tablename);
-        String Name1=jTextFieldName.getText();
-        String Rollno=jTextFieldRollNO.getText();
-        String DOS=jTextFieldDate.getText();
         String AssName=(String)jComboBoxAssname.getSelectedItem();
-        String AssFile=jTextFieldAssFile.getText();
+        String tablename=Class+"-"+Subject+"-"+Div+"-"+AssName;
+        System.out.println(tablename);
 
         try
         {
+            int error=1;
             Connection con=ConnectionProvider.getCon();
-            PreparedStatement ps=con.prepareStatement("insert into "+tablename+" values (?,?,?,?,?)");
-            //System.out.println("insert into "+tablename+" values (?,?,?,?,?)");
-            //ps.setString(1, tablename);
-            ps.setString(1, Name1);
-            ps.setString(2, Rollno);
-            ps.setString(3, DOS);
-            ps.setString(4, AssName);
-            ps.setString(5, AssFile);
-
-            ps.executeUpdate();
-            JOptionPane.showMessageDialog(null,"Successfully Register,Now you can Login");
-            setVisible(false);
-            new StudentLogin().setVisible(true);
-
+            Statement st=con.createStatement();
+            ResultSet rs=st.executeQuery("create table"+tablename+"(Name1 varchar(100),Rollno varchar(100),DOS date,AssName varchar(100),AssFile varchar(1000),Remarks varchar(500),Marks int");
+            
+            
+            while(rs.next())
+            {
+                error=0;
+                setVisible(true);
+                JOptionPane.showMessageDialog(null,"the assignment is Created");
+            }
+            if(error==1)
+            {
+                JOptionPane.showMessageDialog(null,"the assignment is already created");
+            }
         }
         catch(Exception e)
         {
@@ -274,10 +250,7 @@ public class CreateAss extends javax.swing.JFrame {
     private javax.swing.JButton jButtonSubmit;
     private javax.swing.JComboBox<String> jComboBoxAssname;
     private javax.swing.JComboBox<String> jComboBoxDiv;
-    private javax.swing.JComboBox<String> jComboBoxSub1;
     private javax.swing.JComboBox<String> jComboBoxSub2;
-    private javax.swing.JComboBox<String> jComboBoxSub3;
-    private javax.swing.JComboBox<String> jComboBoxSub4;
     private javax.swing.JComboBox<String> jComboBoxbatch;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
