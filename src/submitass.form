@@ -67,19 +67,21 @@
                                       <Component id="jLabel4" alignment="0" min="-2" pref="164" max="-2" attributes="0"/>
                                       <Component id="jLabel5" alignment="0" min="-2" pref="164" max="-2" attributes="0"/>
                                       <Component id="jLabel9" alignment="0" min="-2" pref="154" max="-2" attributes="0"/>
-                                      <Component id="jLabel6" alignment="0" min="-2" pref="154" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jComboBoxDiv" max="32767" attributes="0"/>
-                                          <Component id="jComboBoxSub2" max="32767" attributes="0"/>
-                                          <Component id="jComboBoxbatch" max="32767" attributes="0"/>
-                                          <Component id="jComboBoxAssname" min="-2" pref="158" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="jLabel10" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jLabel6" alignment="0" pref="154" max="32767" attributes="0"/>
                                       </Group>
-                                      <Component id="jTextFieldName" min="-2" pref="158" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldRollNO" min="-2" pref="158" max="-2" attributes="0"/>
-                                      <Component id="jTextFieldDate" min="-2" pref="158" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="61" pref="61" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jComboBoxDiv" max="32767" attributes="0"/>
+                                      <Component id="jComboBoxSub2" max="32767" attributes="0"/>
+                                      <Component id="jComboBoxbatch" max="32767" attributes="0"/>
+                                      <Component id="jComboBoxAssname" pref="158" max="32767" attributes="0"/>
+                                      <Component id="jTextFieldName" pref="158" max="32767" attributes="0"/>
+                                      <Component id="jTextFieldRollNO" pref="158" max="32767" attributes="0"/>
+                                      <Component id="jTextFieldDate" pref="158" max="32767" attributes="0"/>
+                                      <Component id="jTextFieldAssNote" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
@@ -134,27 +136,32 @@
                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jComboBoxAssname" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel5" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                       <Component id="jTextFieldName" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextFieldRollNO" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextFieldDate" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextFieldAssNote" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jTextFieldAssFile" min="-2" pref="107" max="-2" attributes="0"/>
                       <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="39" max="32767" attributes="0"/>
+                  <EmptySpace pref="25" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="jButtonSubmit" pref="62" max="32767" attributes="0"/>
                       <Component id="jButtonReset" max="32767" attributes="0"/>
@@ -198,12 +205,28 @@
               <Font name="Tahoma" size="16" style="1"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="5">
-                <StringItem index="0" value="DBMS"/>
-                <StringItem index="1" value="OS"/>
-                <StringItem index="2" value="SEPM"/>
-                <StringItem index="3" value="HCI "/>
-                <StringItem index="4" value="TOC"/>
+              <StringArray count="21">
+                <StringItem index="0" value="M1"/>
+                <StringItem index="1" value="Phy"/>
+                <StringItem index="2" value="Chem"/>
+                <StringItem index="3" value="Mech"/>
+                <StringItem index="4" value="Elec"/>
+                <StringItem index="5" value="OOPL"/>
+                <StringItem index="6" value="FDS"/>
+                <StringItem index="7" value="DELD"/>
+                <StringItem index="8" value="M3"/>
+                <StringItem index="9" value="DS"/>
+                <StringItem index="10" value="OS"/>
+                <StringItem index="11" value="HCI"/>
+                <StringItem index="12" value="TOC"/>
+                <StringItem index="13" value="DBMS"/>
+                <StringItem index="14" value="SEPM"/>
+                <StringItem index="15" value="ICS"/>
+                <StringItem index="16" value="MLA"/>
+                <StringItem index="17" value="SDM"/>
+                <StringItem index="18" value="BAI"/>
+                <StringItem index="19" value="STQA"/>
+                <StringItem index="20" value=" "/>
               </StringArray>
             </Property>
           </Properties>
@@ -377,6 +400,21 @@
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel10">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Ass Note"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextFieldAssNote">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="16" style="1"/>
+            </Property>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>

@@ -51,6 +51,8 @@ public class submitass extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jTextFieldDate = new javax.swing.JTextField();
         jComboBoxbatch = new javax.swing.JComboBox<>();
+        jLabel10 = new javax.swing.JLabel();
+        jTextFieldAssNote = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(175, 175));
@@ -70,7 +72,7 @@ public class submitass extends javax.swing.JFrame {
         jLabel3.setText("Submit Assigment");
 
         jComboBoxSub2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jComboBoxSub2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DBMS", "OS", "SEPM", "HCI ", "TOC" }));
+        jComboBoxSub2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "M1", "Phy", "Chem", "Mech", "Elec", "OOPL", "FDS", "DELD", "M3", "DS", "OS", "HCI", "TOC", "DBMS", "SEPM", "ICS", "MLA", "SDM", "BAI", "STQA", " " }));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel4.setText("Assignment Name");
@@ -130,6 +132,11 @@ public class submitass extends javax.swing.JFrame {
         jComboBoxbatch.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jComboBoxbatch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "FE", "SE", "TE", "BE" }));
 
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel10.setText("Ass Note");
+
+        jTextFieldAssNote.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -150,17 +157,19 @@ public class submitass extends javax.swing.JFrame {
                                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)))
                                 .addGap(61, 61, 61)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jComboBoxDiv, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jComboBoxSub2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jComboBoxbatch, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jComboBoxAssname, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jTextFieldName, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextFieldRollNO, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextFieldDate, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jComboBoxDiv, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jComboBoxSub2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jComboBoxbatch, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jComboBoxAssname, 0, 158, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldName, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldRollNO, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldDate, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldAssNote))
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -199,23 +208,27 @@ public class submitass extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jComboBoxAssname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(jTextFieldRollNO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(jTextFieldDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
+                .addGap(27, 27, 27)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(jTextFieldAssNote, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextFieldAssFile, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButtonSubmit, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
                     .addComponent(jButtonReset, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -241,30 +254,36 @@ public class submitass extends javax.swing.JFrame {
         String Class=(String)jComboBoxbatch.getSelectedItem();
         String Subject=(String)jComboBoxSub2.getSelectedItem();
         String Div=(String)jComboBoxDiv.getSelectedItem();
-        String tablename=Class+Subject+Div;
+        String AssName=(String)jComboBoxAssname.getSelectedItem();
+        String tablename=Class+Subject+Div+AssName;
+        
         System.out.println(tablename);
+        
         String Name1=jTextFieldName.getText();
         String Rollno=jTextFieldRollNO.getText();
         String DOS=jTextFieldDate.getText();
-        String AssName=(String)jComboBoxAssname.getSelectedItem();
+        String AssNote=jTextFieldAssNote.getText();
         String AssFile=jTextFieldAssFile.getText();
+        String Remark="NULL";
+        String Marks="0";
         
         try
         {
             Connection con=ConnectionProvider.getCon();
-            PreparedStatement ps=con.prepareStatement("insert into "+tablename+" values (?,?,?,?,?)");
-            //System.out.println("insert into "+tablename+" values (?,?,?,?,?)");
-            //ps.setString(1, tablename);
+            PreparedStatement ps=con.prepareStatement("insert into "+tablename+" values (?,?,?, ?,?,?, ?)");
+            
             ps.setString(1, Name1);
             ps.setString(2, Rollno);
             ps.setString(3, DOS);
-            ps.setString(4, AssName);
+            ps.setString(4, AssNote);
             ps.setString(5, AssFile);
+            ps.setString(6, Remark);
+            ps.setString(7, Marks);
             
             ps.executeUpdate();
-            JOptionPane.showMessageDialog(null,"Successfully Register,Now you can Login");
-            setVisible(false);
-            new StudentLogin().setVisible(true);
+            JOptionPane.showMessageDialog(null,"Successfully Assignment Submitted by "+ Name1 +" " );
+            setVisible(true);
+            //new StudentLogin().setVisible(true);
             
         }
         catch(Exception e)
@@ -328,6 +347,7 @@ public class submitass extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBoxSub2;
     private javax.swing.JComboBox<String> jComboBoxbatch;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -338,6 +358,7 @@ public class submitass extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextFieldAssFile;
+    private javax.swing.JTextField jTextFieldAssNote;
     private javax.swing.JTextField jTextFieldDate;
     private javax.swing.JTextField jTextFieldName;
     private javax.swing.JTextField jTextFieldRollNO;
