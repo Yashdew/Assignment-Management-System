@@ -176,15 +176,32 @@ public class CreateAss extends javax.swing.JFrame {
         String Subject=(String)jComboBoxSub2.getSelectedItem();
         String Div=(String)jComboBoxDiv.getSelectedItem();
         String AssName=(String)jComboBoxAssname.getSelectedItem();
-        String tablename=Class+"-"+Subject+"-"+Div+"-"+AssName;
+        String tablename= Class+Subject+Div+AssName;
         System.out.println(tablename);
-
+        
+        
         try
+        {
+            Connection con=ConnectionProvider.getCon();
+            PreparedStatement ps;
+            ps = con.prepareStatement("create table "+tablename+"(Name1 varchar(100),Rollno varchar(100),DOS varchar(100),AssNote varchar(100),AssFile varchar(1000),Remarks varchar(500),Marks int)");
+            
+            ps.executeUpdate();
+            JOptionPane.showMessageDialog(null,"Successfully Assignment is Created");
+            setVisible(true);
+            
+            
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null,e);
+        }
+        /*try
         {
             int error=1;
             Connection con=ConnectionProvider.getCon();
             Statement st=con.createStatement();
-            ResultSet rs=st.executeQuery("create table"+tablename+"(Name1 varchar(100),Rollno varchar(100),DOS date,AssName varchar(100),AssFile varchar(1000),Remarks varchar(500),Marks int");
+            ResultSet rs=st.executeQuery("create table "+tablename+" (Name1 varchar(100),Rollno varchar(100),DOS date,AssName varchar(100),AssFile varchar(1000),Remarks varchar(500),Marks int");
             
             
             while(rs.next())
@@ -201,13 +218,13 @@ public class CreateAss extends javax.swing.JFrame {
         catch(Exception e)
         {
             JOptionPane.showMessageDialog(null,e);
-        }
+        }*/
     }//GEN-LAST:event_jButtonSubmitActionPerformed
 
     private void jButtonResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonResetActionPerformed
         // TODO add your handling code here:
         setVisible(false);
-        new submitass().setVisible(true);
+        new CreateAss().setVisible(true);
     }//GEN-LAST:event_jButtonResetActionPerformed
 
     /**

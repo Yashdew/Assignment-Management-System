@@ -28,6 +28,16 @@ public class Checkstatus extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jComboBoxbatch = new javax.swing.JComboBox<>();
+        jLabel4 = new javax.swing.JLabel();
+        jComboBoxSub2 = new javax.swing.JComboBox<>();
+        jLabel7 = new javax.swing.JLabel();
+        jComboBoxDiv = new javax.swing.JComboBox<>();
+        jLabel5 = new javax.swing.JLabel();
+        jComboBoxAssname = new javax.swing.JComboBox<>();
+        jButtonSubmit = new javax.swing.JButton();
+        jButtonReset = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -40,7 +50,48 @@ public class Checkstatus extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(51, 0, 204));
         jLabel1.setText("Check Status");
 
-        jLabel2.setText("Choose your class");
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel3.setText("Choose Class");
+
+        jComboBoxbatch.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jComboBoxbatch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "FE", "SE", "TE", "BE" }));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel4.setText("Choose Subject");
+
+        jComboBoxSub2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jComboBoxSub2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "M1", "Phy", "Chem", "Mech", "Elec", "OOPL", "FDS", "DELD", "M3", "DS", "OS", "HCI", "TOC", "DBMS", "SEPM", "ICS", "MLA", "SDM", "BAI", "STQA", " " }));
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel7.setText("Division");
+
+        jComboBoxDiv.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jComboBoxDiv.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Div1", "Div2", " " }));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel5.setText("Assignment Name");
+
+        jComboBoxAssname.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jComboBoxAssname.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ass1", "Ass2", "Ass3", "Ass4", "Ass5", "Ass6", "Ass7", "Ass8", "Ass9", "Ass10" }));
+
+        jButtonSubmit.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jButtonSubmit.setText("Search Assignment ");
+        jButtonSubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSubmitActionPerformed(evt);
+            }
+        });
+
+        jButtonReset.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jButtonReset.setText("Reset");
+        jButtonReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonResetActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel2.setText("Roll no");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -52,18 +103,57 @@ public class Checkstatus extends javax.swing.JFrame {
                         .addGap(452, 452, 452)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jLabel2)))
+                        .addGap(32, 32, 32)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonSubmit)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(16, 16, 16)
+                                .addComponent(jLabel2)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jComboBoxDiv, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBoxbatch, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBoxSub2, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jButtonReset, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBoxAssname, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(536, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jComboBoxDiv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel7))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBoxbatch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(23, 23, 23)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jComboBoxSub2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4))
+                        .addGap(72, 72, 72)))
+                .addGap(29, 29, 29)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jComboBoxAssname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(59, 59, 59)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonReset, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(87, 87, 87)
                 .addComponent(jLabel2)
-                .addContainerGap(655, Short.MAX_VALUE))
+                .addContainerGap(311, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -79,6 +169,60 @@ public class Checkstatus extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubmitActionPerformed
+        // TODO add your handling code here: SUBMIT
+        String Class=(String)jComboBoxbatch.getSelectedItem();
+        String Subject=(String)jComboBoxSub2.getSelectedItem();
+        String Div=(String)jComboBoxDiv.getSelectedItem();
+        String AssName=(String)jComboBoxAssname.getSelectedItem();
+        String tablename= Class+Subject+Div+AssName;
+        System.out.println(tablename);
+
+        try
+        {
+            Connection con=ConnectionProvider.getCon();
+            PreparedStatement ps;
+            ps = con.prepareStatement("create table "+tablename+"(Name1 varchar(100),Rollno varchar(100),DOS varchar(100),AssNote varchar(100),AssFile varchar(1000),Remarks varchar(500),Marks int)");
+
+            ps.executeUpdate();
+            JOptionPane.showMessageDialog(null,"Successfully Assignment is Created");
+            setVisible(true);
+
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null,e);
+        }
+        /*try
+        {
+            int error=1;
+            Connection con=ConnectionProvider.getCon();
+            Statement st=con.createStatement();
+            ResultSet rs=st.executeQuery("create table "+tablename+" (Name1 varchar(100),Rollno varchar(100),DOS date,AssName varchar(100),AssFile varchar(1000),Remarks varchar(500),Marks int");
+
+            while(rs.next())
+            {
+                error=0;
+                setVisible(true);
+                JOptionPane.showMessageDialog(null,"the assignment is Created");
+            }
+            if(error==1)
+            {
+                JOptionPane.showMessageDialog(null,"the assignment is already created");
+            }
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null,e);
+        }*/
+    }//GEN-LAST:event_jButtonSubmitActionPerformed
+
+    private void jButtonResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonResetActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        new CreateAss().setVisible(true);
+    }//GEN-LAST:event_jButtonResetActionPerformed
 
     /**
      * @param args the command line arguments
@@ -116,8 +260,18 @@ public class Checkstatus extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonReset;
+    private javax.swing.JButton jButtonSubmit;
+    private javax.swing.JComboBox<String> jComboBoxAssname;
+    private javax.swing.JComboBox<String> jComboBoxDiv;
+    private javax.swing.JComboBox<String> jComboBoxSub2;
+    private javax.swing.JComboBox<String> jComboBoxbatch;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
