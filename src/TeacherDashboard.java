@@ -165,6 +165,8 @@ public class TeacherDashboard extends javax.swing.JFrame {
 
     private void jButtonCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateActionPerformed
         // TODO add your handling code here:
+        setVisible(true);
+        new CreateAss().setVisible(true);
     }//GEN-LAST:event_jButtonCreateActionPerformed
 
     /**

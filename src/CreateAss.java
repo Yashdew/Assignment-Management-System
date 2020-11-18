@@ -41,6 +41,7 @@ public class CreateAss extends javax.swing.JFrame {
         jButtonSubmit = new javax.swing.JButton();
         jButtonReset = new javax.swing.JButton();
         jComboBoxSub2 = new javax.swing.JComboBox<>();
+        jButtonClose = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,6 +92,13 @@ public class CreateAss extends javax.swing.JFrame {
         jComboBoxSub2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jComboBoxSub2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "M1", "Phy", "Chem", "Mech", "Elec", "OOPL", "FDS", "DELD", "M3", "DS", "OS", "HCI", "TOC", "DBMS", "SEPM", "ICS", "MLA", "SDM", "BAI", "STQA", " " }));
 
+        jButtonClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/close.png"))); // NOI18N
+        jButtonClose.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCloseActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -98,7 +106,9 @@ public class CreateAss extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(417, 417, 417)
+                        .addGap(42, 42, 42)
+                        .addComponent(jButtonClose, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(309, 309, 309)
                         .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(463, 463, 463)
@@ -128,8 +138,13 @@ public class CreateAss extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(92, 92, 92)
-                .addComponent(jLabel1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(92, 92, 92)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jButtonClose, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(119, 119, 119)
                 .addComponent(jComboBoxbatch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -227,6 +242,11 @@ public class CreateAss extends javax.swing.JFrame {
         new CreateAss().setVisible(true);
     }//GEN-LAST:event_jButtonResetActionPerformed
 
+    private void jButtonCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCloseActionPerformed
+        // TODO add your handling code here: Close
+        setVisible(false);
+    }//GEN-LAST:event_jButtonCloseActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -263,6 +283,7 @@ public class CreateAss extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonClose;
     private javax.swing.JButton jButtonReset;
     private javax.swing.JButton jButtonSubmit;
     private javax.swing.JComboBox<String> jComboBoxAssname;
