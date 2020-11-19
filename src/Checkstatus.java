@@ -1,6 +1,7 @@
 import project.ConnectionProvider;
 import java.sql.*;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -18,6 +19,23 @@ public class Checkstatus extends javax.swing.JFrame {
      */
     public Checkstatus() {
         initComponents();
+        DefaultTableModel model=(DefaultTableModel)jTable1.getModel();
+        /*try
+        {
+            Connection con=ConnectionProvider.getCon();
+            Statement st=con.createStatement();
+            ResultSet rs=st.executeQuery("select * from tablename");
+            while(rs.next())
+            {
+                model.addRow(new Object[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),
+                                          rs.getString(5),rs.getString(6),rs.getString(7)});
+                
+            }
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }*/
     }
 
     /**
@@ -42,11 +60,15 @@ public class Checkstatus extends javax.swing.JFrame {
         jButtonSubmit = new javax.swing.JButton();
         jButtonReset = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTextFieldRollno = new javax.swing.JTextField();
         jButtonSubmit1 = new javax.swing.JButton();
         jButtonClose = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jLabel6 = new javax.swing.JLabel();
+        jTextFieldRemark = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jTextFieldMarks = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -101,7 +123,7 @@ public class Checkstatus extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel2.setText("Roll no");
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jTextFieldRollno.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
 
         jButtonSubmit1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jButtonSubmit1.setText("Search Assignment ");
@@ -128,12 +150,25 @@ public class Checkstatus extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel6.setText("Remark");
+
+        jTextFieldRemark.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel8.setText("Marks");
+
+        jTextFieldMarks.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(106, 106, 106)
+                        .addComponent(jButtonSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(32, 32, 32)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -156,13 +191,16 @@ public class Checkstatus extends javax.swing.JFrame {
                                             .addComponent(jComboBoxDiv, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jComboBoxbatch, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jComboBoxSub2, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(104, 104, 104)
-                        .addComponent(jButtonSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextFieldRollno, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldRemark)
+                                    .addComponent(jTextFieldMarks))))))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(69, 69, 69)
@@ -206,8 +244,16 @@ public class Checkstatus extends javax.swing.JFrame {
                         .addGap(60, 60, 60)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(42, 42, 42)
+                            .addComponent(jTextFieldRollno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(jTextFieldRemark, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldMarks, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(31, 31, 31)
                         .addComponent(jButtonSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -236,16 +282,22 @@ public class Checkstatus extends javax.swing.JFrame {
         String Div=(String)jComboBoxDiv.getSelectedItem();
         String AssName=(String)jComboBoxAssname.getSelectedItem();
         String tablename= Class+Subject+Div+AssName;
-        System.out.println(tablename);
+        
+        String Rollno =jTextFieldRollno.getText();
+        String Remark =jTextFieldRemark.getText();
+        String Marks =jTextFieldMarks.getText();
+        
+        System.out.println("UPDATE "+tablename+"SET Remarks= '"+Remark+"',Marks="+Marks+" where Rollno='"+Rollno+"'  ");
 
         try
         {
             Connection con=ConnectionProvider.getCon();
             PreparedStatement ps;
-            ps = con.prepareStatement("create table "+tablename+"(Name1 varchar(100),Rollno varchar(100),DOS varchar(100),AssNote varchar(100),AssFile varchar(1000),Remarks varchar(500),Marks int)");
-
+            ps = con.prepareStatement("UPDATE "+tablename+" SET Remarks= '"+Remark+"',Marks="+Marks+" where Rollno='"+Rollno+"'  "); 
+            
+            //ps = con.prepareStatement("UPDATE "+tablename+"SET Remarks="+Remark+",Marks="+Marks+" where Rollno='"+Rollno+""); 
             ps.executeUpdate();
-            JOptionPane.showMessageDialog(null,"Successfully Assignment is Created");
+            JOptionPane.showMessageDialog(null,"Successfully,Assignment is Updated now");
             setVisible(true);
 
         }
@@ -280,11 +332,33 @@ public class Checkstatus extends javax.swing.JFrame {
     private void jButtonResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonResetActionPerformed
         // TODO add your handling code here:
         setVisible(false);
-        new CreateAss().setVisible(true);
+        new Checkstatus().setVisible(true);
     }//GEN-LAST:event_jButtonResetActionPerformed
 
     private void jButtonSubmit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubmit1ActionPerformed
         // TODO add your handling code here:
+        DefaultTableModel model=(DefaultTableModel)jTable1.getModel();
+        String Class=(String)jComboBoxbatch.getSelectedItem();
+        String Subject=(String)jComboBoxSub2.getSelectedItem();
+        String Div=(String)jComboBoxDiv.getSelectedItem();
+        String AssName=(String)jComboBoxAssname.getSelectedItem();
+        String tablename=Class+Subject+Div+AssName;
+        try
+        {
+            Connection con=ConnectionProvider.getCon();
+            Statement st=con.createStatement();
+            ResultSet rs=st.executeQuery("select * from "+tablename+" ");
+            while(rs.next())
+            {
+                model.addRow(new Object[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),
+                                          rs.getString(5),rs.getString(6),rs.getString(7)});
+                
+            }
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
     }//GEN-LAST:event_jButtonSubmit1ActionPerformed
 
     private void jButtonCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCloseActionPerformed
@@ -341,10 +415,14 @@ public class Checkstatus extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextFieldMarks;
+    private javax.swing.JTextField jTextFieldRemark;
+    private javax.swing.JTextField jTextFieldRollno;
     // End of variables declaration//GEN-END:variables
 }
