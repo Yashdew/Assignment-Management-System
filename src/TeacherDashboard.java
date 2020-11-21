@@ -62,6 +62,11 @@ public class TeacherDashboard extends javax.swing.JFrame {
                 jButtonCheckASSMouseClicked(evt);
             }
         });
+        jButtonCheckASS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCheckASSActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         jLabel1.setText("Teacher Dashboard");
@@ -168,6 +173,12 @@ public class TeacherDashboard extends javax.swing.JFrame {
         setVisible(true);
         new CreateAss().setVisible(true);
     }//GEN-LAST:event_jButtonCreateActionPerformed
+
+    private void jButtonCheckASSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCheckASSActionPerformed
+        // TODO add your handling code here:
+        setVisible(true);
+        new Checkstatus().setVisible(true);
+    }//GEN-LAST:event_jButtonCheckASSActionPerformed
 
     /**
      * @param args the command line arguments
