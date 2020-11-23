@@ -82,43 +82,58 @@ public class StudentSignUp extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 153, 102));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sign up icon.png"))); // NOI18N
         jLabel1.setText("Student Signup Form");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(102, 153, 0));
         jLabel2.setText("Full Name");
 
         jTextFieldFullName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jTextFieldFullName.setForeground(new java.awt.Color(102, 153, 0));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(102, 153, 0));
         jLabel3.setText("Email");
 
         jTextFieldEmail.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jTextFieldEmail.setForeground(new java.awt.Color(102, 153, 0));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(102, 153, 0));
         jLabel4.setText("Password");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(102, 153, 0));
         jLabel5.setText("Division");
 
         jComboBoxDiv.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jComboBoxDiv.setForeground(new java.awt.Color(102, 153, 0));
         jComboBoxDiv.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Div 1", "Div 2" }));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(102, 153, 0));
         jLabel6.setText("Year");
 
         jComboBoxYear.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jComboBoxYear.setForeground(new java.awt.Color(102, 153, 0));
         jComboBoxYear.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "FE", "SE", "TE", "BE" }));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(102, 153, 0));
         jLabel7.setText("Branch");
 
         jComboBoxBranch.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jComboBoxBranch.setForeground(new java.awt.Color(102, 153, 0));
         jComboBoxBranch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "IT", "CS", "ENTC", "MECH" }));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(102, 153, 0));
         jLabel8.setText("Roll No");
 
         jTextFieldRollNo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jTextFieldRollNo.setForeground(new java.awt.Color(102, 153, 0));
         jTextFieldRollNo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldRollNoActionPerformed(evt);
@@ -126,7 +141,8 @@ public class StudentSignUp extends javax.swing.JFrame {
         });
 
         jButtonSumbit.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        jButtonSumbit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/save.png"))); // NOI18N
+        jButtonSumbit.setForeground(new java.awt.Color(153, 153, 0));
+        jButtonSumbit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Audit icon.png"))); // NOI18N
         jButtonSumbit.setText("Submit");
         jButtonSumbit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,6 +151,7 @@ public class StudentSignUp extends javax.swing.JFrame {
         });
 
         jButtonReset.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jButtonReset.setForeground(new java.awt.Color(153, 153, 0));
         jButtonReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/reset.png"))); // NOI18N
         jButtonReset.setText("Reset");
         jButtonReset.addActionListener(new java.awt.event.ActionListener() {
@@ -144,6 +161,7 @@ public class StudentSignUp extends javax.swing.JFrame {
         });
 
         jLabelID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelID.setForeground(new java.awt.Color(102, 153, 0));
         jLabelID.setText("ID");
 
         jLabelIDnumber.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -156,6 +174,7 @@ public class StudentSignUp extends javax.swing.JFrame {
         jLabelSAME.setText("Email or Roll no. Already Exist");
 
         jCheckBox1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jCheckBox1.setForeground(new java.awt.Color(102, 153, 0));
         jCheckBox1.setText("Show Password");
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,6 +183,7 @@ public class StudentSignUp extends javax.swing.JFrame {
         });
 
         jPasswordFieldPassword.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jPasswordFieldPassword.setForeground(new java.awt.Color(102, 153, 0));
 
         jButtonHOME.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButtonHOME.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/exit.png"))); // NOI18N
@@ -192,7 +212,7 @@ public class StudentSignUp extends javax.swing.JFrame {
                         .addComponent(jCheckBox1))
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jTextFieldEmail))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 311, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jComboBoxDiv, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -259,7 +279,7 @@ public class StudentSignUp extends javax.swing.JFrame {
                             .addComponent(jComboBoxBranch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jCheckBox1)
                             .addComponent(jPasswordFieldPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabelSAME)
                 .addGap(40, 40, 40)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

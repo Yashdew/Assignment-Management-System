@@ -45,11 +45,13 @@ public class StudentDashboard extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 3, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Dashboard T icon.png"))); // NOI18N
         jLabel1.setText("Student Dashboard");
 
         jButtonSubmit.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonSubmit.setForeground(new java.awt.Color(0, 204, 255));
         jButtonSubmit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/update & delete member.png"))); // NOI18N
         jButtonSubmit.setText("Submit Assignment");
         jButtonSubmit.addActionListener(new java.awt.event.ActionListener() {
@@ -75,6 +77,7 @@ public class StudentDashboard extends javax.swing.JFrame {
         });
 
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(0, 204, 255));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search.png"))); // NOI18N
         jButton3.setText("Check Status");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -88,11 +91,11 @@ public class StudentDashboard extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(287, 287, 287)
+                .addGap(428, 428, 428)
                 .addComponent(jButtonSubmit)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 677, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 473, Short.MAX_VALUE)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(231, 231, 231))
+                .addGap(294, 294, 294))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -102,8 +105,8 @@ public class StudentDashboard extends javax.swing.JFrame {
                         .addComponent(jButtonExit)
                         .addGap(22, 22, 22))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(578, 578, 578))))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(500, 500, 500))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
