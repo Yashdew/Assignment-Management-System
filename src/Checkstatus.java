@@ -77,34 +77,45 @@ public class Checkstatus extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 204));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 0, 204));
+        jLabel1.setForeground(new java.awt.Color(153, 51, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/check icon.png"))); // NOI18N
         jLabel1.setText("Check Status");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 51, 255));
         jLabel3.setText("Choose Class");
 
         jComboBoxbatch.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jComboBoxbatch.setForeground(new java.awt.Color(0, 51, 255));
         jComboBoxbatch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "FE", "SE", "TE", "BE" }));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 51, 255));
         jLabel4.setText("Choose Subject");
 
         jComboBoxSub2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jComboBoxSub2.setForeground(new java.awt.Color(0, 51, 255));
         jComboBoxSub2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "M1", "Phy", "Chem", "Mech", "Elec", "OOPL", "FDS", "DELD", "M3", "DS", "OS", "HCI", "TOC", "DBMS", "SEPM", "ICS", "MLA", "SDM", "BAI", "STQA", " " }));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 51, 255));
         jLabel7.setText("Division");
 
         jComboBoxDiv.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jComboBoxDiv.setForeground(new java.awt.Color(0, 51, 255));
         jComboBoxDiv.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Div1", "Div2", " " }));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 51, 255));
         jLabel5.setText("Assignment Name");
 
         jComboBoxAssname.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jComboBoxAssname.setForeground(new java.awt.Color(0, 51, 255));
         jComboBoxAssname.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ass1", "Ass2", "Ass3", "Ass4", "Ass5", "Ass6", "Ass7", "Ass8", "Ass9", "Ass10" }));
 
         jButtonSubmit.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jButtonSubmit.setForeground(new java.awt.Color(0, 51, 255));
+        jButtonSubmit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/update medium icon.png"))); // NOI18N
         jButtonSubmit.setText("Update");
         jButtonSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,6 +124,8 @@ public class Checkstatus extends javax.swing.JFrame {
         });
 
         jButtonReset.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jButtonReset.setForeground(new java.awt.Color(0, 51, 255));
+        jButtonReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/reset.png"))); // NOI18N
         jButtonReset.setText("Reset");
         jButtonReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,11 +134,15 @@ public class Checkstatus extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 51, 255));
         jLabel2.setText("Roll no");
 
         jTextFieldRollno.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jTextFieldRollno.setForeground(new java.awt.Color(0, 51, 255));
 
         jButtonSubmit1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jButtonSubmit1.setForeground(new java.awt.Color(0, 51, 255));
+        jButtonSubmit1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search.png"))); // NOI18N
         jButtonSubmit1.setText("Search Assignment ");
         jButtonSubmit1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,14 +168,18 @@ public class Checkstatus extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 51, 255));
         jLabel6.setText("Remark");
 
         jTextFieldRemark.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jTextFieldRemark.setForeground(new java.awt.Color(0, 51, 255));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 51, 255));
         jLabel8.setText("Marks");
 
         jTextFieldMarks.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jTextFieldMarks.setForeground(new java.awt.Color(0, 51, 255));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -203,20 +224,23 @@ public class Checkstatus extends javax.swing.JFrame {
                                     .addComponent(jTextFieldMarks))))))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(69, 69, 69)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 899, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(29, Short.MAX_VALUE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 899, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(23, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(356, 356, 356))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonClose, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButtonClose, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(9, 9, 9))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(83, 83, 83)

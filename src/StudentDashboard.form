@@ -44,11 +44,11 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="287" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="428" max="-2" attributes="0"/>
                   <Component id="jButtonSubmit" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="677" max="32767" attributes="0"/>
+                  <EmptySpace pref="473" max="32767" attributes="0"/>
                   <Component id="jButton3" min="-2" pref="265" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="231" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="294" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
@@ -60,8 +60,8 @@
                           <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="578" max="-2" attributes="0"/>
+                          <Component id="jLabel1" min="-2" pref="544" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="500" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -91,10 +91,13 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tahoma" size="48" style="1"/>
+              <Font name="Tahoma" size="48" style="3"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="33" red="33" type="rgb"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/images/Dashboard T icon.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Student Dashboard"/>
           </Properties>
@@ -103,6 +106,9 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="cc" red="0" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/update &amp; delete member.png"/>
@@ -139,6 +145,9 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="cc" red="0" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/search.png"/>

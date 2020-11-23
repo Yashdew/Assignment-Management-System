@@ -79,9 +79,12 @@ public class TeacherSignup extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 102, 0));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/teacher icon.png"))); // NOI18N
         jLabel1.setText("Teacher Signup");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 204, 102));
         jLabel2.setText("ID");
 
         jLabelID.setBackground(new java.awt.Color(204, 0, 51));
@@ -90,21 +93,28 @@ public class TeacherSignup extends javax.swing.JFrame {
         jLabelID.setText("00");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 204, 102));
         jLabel4.setText("Full Name");
 
         jTextFieldFullName.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jTextFieldFullName.setForeground(new java.awt.Color(255, 204, 102));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 204, 102));
         jLabel5.setText("Email");
 
         jTextFieldEmail.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jTextFieldEmail.setForeground(new java.awt.Color(255, 204, 102));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 204, 102));
         jLabel6.setText("Password");
 
         jPasswordFieldPassword.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jPasswordFieldPassword.setForeground(new java.awt.Color(255, 204, 102));
 
         jCheckBox1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jCheckBox1.setForeground(new java.awt.Color(255, 204, 102));
         jCheckBox1.setText("Show Password");
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,7 +123,8 @@ public class TeacherSignup extends javax.swing.JFrame {
         });
 
         jButtonRegister.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButtonRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/save.png"))); // NOI18N
+        jButtonRegister.setForeground(new java.awt.Color(255, 51, 0));
+        jButtonRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Audit icon.png"))); // NOI18N
         jButtonRegister.setText("Register");
         jButtonRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,7 +133,8 @@ public class TeacherSignup extends javax.swing.JFrame {
         });
 
         jButtonReset.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButtonReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/reset.png"))); // NOI18N
+        jButtonReset.setForeground(new java.awt.Color(255, 51, 0));
+        jButtonReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Audit icon.png"))); // NOI18N
         jButtonReset.setText("Reset");
         jButtonReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,8 +163,12 @@ public class TeacherSignup extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(470, 470, 470)
+                        .addGap(485, 485, 485)
+                        .addComponent(jLabelSAME))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(442, 442, 442)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel1)
                             .addComponent(jCheckBox1)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jPasswordFieldPassword)
@@ -166,15 +182,10 @@ public class TeacherSignup extends javax.swing.JFrame {
                                 .addComponent(jTextFieldFullName)
                                 .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabelID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(485, 485, 485)
-                        .addComponent(jLabelSAME)))
-                .addContainerGap(452, Short.MAX_VALUE))
+                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                .addContainerGap(444, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(458, 458, 458)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButtonHOME)
                 .addGap(74, 74, 74))
         );

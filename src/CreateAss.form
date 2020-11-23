@@ -48,42 +48,37 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                           <Component id="jButtonClose" min="-2" pref="66" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="309" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="288" max="-2" attributes="0"/>
+                          <Component id="jLabel1" min="-2" pref="578" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="463" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="448" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel4" min="-2" pref="164" max="-2" attributes="0"/>
+                                      <Component id="jLabel3" min="-2" pref="164" max="-2" attributes="0"/>
+                                      <Component id="jLabel7" min="-2" pref="175" max="-2" attributes="0"/>
                                       <Component id="jLabel5" alignment="0" min="-2" pref="164" max="-2" attributes="0"/>
-                                      <Component id="jButtonSubmit" alignment="0" min="-2" pref="174" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jButtonReset" pref="158" max="32767" attributes="0"/>
-                                      <Component id="jComboBoxAssname" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jComboBoxSub2" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jComboBoxbatch" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
+                                  <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jLabel7" min="-2" pref="175" max="-2" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jButtonSubmit" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jComboBoxAssname" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jComboBoxSub2" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jComboBoxbatch" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jButtonReset" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBoxDiv" min="-2" pref="161" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="435" max="32767" attributes="0"/>
-              </Group>
-              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="462" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="jLabel3" alignment="0" pref="164" max="32767" attributes="0"/>
-                          <Component id="jLabel4" alignment="0" pref="164" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                      <Component id="jComboBoxDiv" min="-2" pref="161" max="-2" attributes="0"/>
-                      <EmptySpace pref="458" max="32767" attributes="0"/>
-                  </Group>
+                  <EmptySpace pref="332" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -100,34 +95,32 @@
                           <Component id="jButtonClose" min="-2" pref="69" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
-                  <Component id="jComboBoxbatch" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jComboBoxSub2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="jComboBoxbatch" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel3" min="-2" pref="34" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jComboBoxDiv" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jComboBoxSub2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jComboBoxAssname" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButtonSubmit" alignment="3" min="-2" pref="62" max="-2" attributes="0"/>
-                      <Component id="jButtonReset" alignment="3" min="-2" pref="62" max="-2" attributes="0"/>
+                      <Component id="jButtonSubmit" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButtonReset" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="208" max="32767" attributes="0"/>
-              </Group>
-              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="260" max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" pref="34" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jComboBoxDiv" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="455" max="32767" attributes="0"/>
-                  </Group>
+                  <EmptySpace pref="225" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -144,6 +137,9 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="0" red="0" type="rgb"/>
             </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/images/task icon.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Create assignment"/>
           </Properties>
         </Component>
@@ -152,6 +148,9 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="16" style="1"/>
             </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="0" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Choose Class"/>
           </Properties>
         </Component>
@@ -159,6 +158,9 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="16" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="0" red="66" type="rgb"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
@@ -178,6 +180,9 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="16" style="1"/>
             </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="0" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Choose Subject"/>
           </Properties>
         </Component>
@@ -186,6 +191,9 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="16" style="1"/>
             </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="0" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Division"/>
           </Properties>
         </Component>
@@ -193,6 +201,9 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="16" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="0" red="66" type="rgb"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="3">
@@ -211,6 +222,9 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="16" style="1"/>
             </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="0" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Assignment Name"/>
           </Properties>
         </Component>
@@ -218,6 +232,9 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="16" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="0" red="66" type="rgb"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="10">
@@ -243,6 +260,12 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="16" style="1"/>
             </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="0" red="66" type="rgb"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/images/Audit icon.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Submit"/>
           </Properties>
           <Events>
@@ -254,6 +277,12 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="16" style="1"/>
             </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="0" red="66" type="rgb"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/images/reset.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Reset"/>
           </Properties>
           <Events>
@@ -264,6 +293,9 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="16" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="0" red="66" type="rgb"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="21">

@@ -41,7 +41,8 @@ public class TeacherDashboard extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jButtonCreate.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButtonCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/save.png"))); // NOI18N
+        jButtonCreate.setForeground(new java.awt.Color(51, 153, 255));
+        jButtonCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/task2 icon.png"))); // NOI18N
         jButtonCreate.setText("Create Assigment");
         jButtonCreate.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -55,7 +56,8 @@ public class TeacherDashboard extends javax.swing.JFrame {
         });
 
         jButtonCheckASS.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButtonCheckASS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search.png"))); // NOI18N
+        jButtonCheckASS.setForeground(new java.awt.Color(51, 153, 255));
+        jButtonCheckASS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/check icon.png"))); // NOI18N
         jButtonCheckASS.setText("Check Assignment");
         jButtonCheckASS.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -68,7 +70,10 @@ public class TeacherDashboard extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setBackground(new java.awt.Color(51, 255, 255));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/dashboard icon.png"))); // NOI18N
         jLabel1.setText("Teacher Dashboard");
 
         jButtonLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logout.png"))); // NOI18N
@@ -92,24 +97,22 @@ public class TeacherDashboard extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(258, Short.MAX_VALUE)
+                .addContainerGap(185, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jButtonCreate)
-                        .addGap(258, 258, 258)
-                        .addComponent(jButtonCheckASS, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(211, 211, 211))
+                        .addGap(243, 243, 243)
+                        .addComponent(jButtonCheckASS)
+                        .addGap(213, 213, 213))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(172, 172, 172)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 250, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jButtonLogout)
-                                .addGap(18, 18, 18)))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButtonLogout)
+                        .addGap(18, 18, 18)
                         .addComponent(jButtonExit))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(388, 388, 388)
+                .addComponent(jLabel1)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,9 +120,9 @@ public class TeacherDashboard extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonLogout)
                     .addComponent(jButtonExit))
-                .addGap(61, 61, 61)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(188, 188, 188)
+                .addGap(134, 134, 134)
+                .addComponent(jLabel1)
+                .addGap(151, 151, 151)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonCheckASS, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
