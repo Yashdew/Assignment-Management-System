@@ -252,7 +252,7 @@ public class TeacherSignup extends javax.swing.JFrame {
     private void jButtonResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonResetActionPerformed
         // TODO add your handling code here:RESET
         setVisible(false);
-        new StudentSignUp().setVisible(true);
+        new TeacherSignup().setVisible(true);
     }//GEN-LAST:event_jButtonResetActionPerformed
 
     private void jButtonRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegisterActionPerformed
