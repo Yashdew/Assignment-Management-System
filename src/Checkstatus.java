@@ -139,6 +139,11 @@ public class Checkstatus extends javax.swing.JFrame {
 
         jTextFieldRollno.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jTextFieldRollno.setForeground(new java.awt.Color(0, 51, 255));
+        jTextFieldRollno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldRollnoActionPerformed(evt);
+            }
+        });
 
         jButtonSubmit1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jButtonSubmit1.setForeground(new java.awt.Color(0, 51, 255));
@@ -389,6 +394,10 @@ public class Checkstatus extends javax.swing.JFrame {
         // TODO add your handling code here: Close
         setVisible(false);
     }//GEN-LAST:event_jButtonCloseActionPerformed
+
+    private void jTextFieldRollnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldRollnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldRollnoActionPerformed
 
     /**
      * @param args the command line arguments
